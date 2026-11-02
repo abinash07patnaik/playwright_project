@@ -1,7 +1,7 @@
-import re
+import pytest
 from playwright.sync_api import Playwright, sync_playwright, expect
 
-
+@pytest.mark.smoke
 def test_recordandplay(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()

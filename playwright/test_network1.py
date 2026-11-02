@@ -1,4 +1,5 @@
-from playwright.sync_api import Page, expect, Playwright
+from playwright.sync_api import Page
+import pytest
 
 
 fakePayloadResponse = {"data":[], "message":"No Orders"}
@@ -8,7 +9,7 @@ def intercept_response(route):
 
     )
 
-
+@pytest.mark.smoke
 def test_network_1(page:Page):
     page.goto("https://rahulshettyacademy.com/client")
     page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*", intercept_response)

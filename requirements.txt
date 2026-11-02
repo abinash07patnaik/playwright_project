@@ -2,5 +2,6 @@ pytest
 pytest-playwright
 requests
 selenium
-
+pytest-xdist
 playwright
+pytest-html
