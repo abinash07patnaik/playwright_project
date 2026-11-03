@@ -5,3 +5,4 @@ selenium
 pytest-xdist
 playwright
 pytest-html
+pytest-bdd
